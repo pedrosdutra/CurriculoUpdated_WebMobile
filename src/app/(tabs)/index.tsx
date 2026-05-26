@@ -15,7 +15,7 @@ export default function HomeScreen() {
     <SafeAreaView style={s.bg} edges={['top']}>
     <ScrollView contentContainerStyle={s.container}>
       <View style={s.card}>
-        <Text style={s.h1}>Meu Currículo & Portfólio</Text>
+        <Text style={s.h1}>Pedro H.S.D Dutra</Text>
         <Text style={s.p}>
           Desenvolvedor Web com foco em React, Next.js e TypeScript. Este portfólio foi
           desenvolvido com Expo / React Native, TypeScript e Expo Router. O layout foi
