@@ -3,14 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { Home, GraduationCap, Briefcase, FolderKanban, Gamepad2, User } from 'lucide-react';
 
 const LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/academica', label: 'Exp. Acadêmica' },
-  { href: '/profissional', label: 'Exp. Profissional' },
-  { href: '/projetos', label: 'Projetos' },
-  { href: '/forca', label: 'Jogo da Forca' },
-  { href: '/sobre', label: 'Sobre' },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/academica', label: 'Exp. Acadêmica', icon: GraduationCap },
+  { href: '/profissional', label: 'Exp. Profissional', icon: Briefcase },
+  { href: '/projetos', label: 'Projetos', icon: FolderKanban },
+  { href: '/forca', label: 'Jogo da Forca', icon: Gamepad2 },
+  { href: '/sobre', label: 'Sobre', icon: User },
 ];
 
 export default function Navbar() {
@@ -33,13 +34,14 @@ export default function Navbar() {
       </button>
 
       <ul className={`navbar-links${open ? ' open' : ''}`}>
-        {LINKS.map(({ href, label }) => (
+        {LINKS.map(({ href, label, icon: Icon }) => (
           <li key={href}>
             <Link
               href={href}
               className={pathname === href ? 'active' : ''}
               onClick={() => setOpen(false)}
             >
+              <Icon size={16} strokeWidth={1.8} />
               {label}
             </Link>
           </li>

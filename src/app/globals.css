@@ -71,6 +71,9 @@ body {
 }
 
 .navbar-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   color: #acc4ff;
   text-decoration: none;
   padding: 0.4rem 0.7rem;
