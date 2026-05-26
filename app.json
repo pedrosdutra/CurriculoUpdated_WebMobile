@@ -4,6 +4,7 @@
     "slug": "curriculo-webmobile",
     "owner": "pedrodutra",
     "version": "1.0.0",
+    "scheme": "curriculo",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -11,23 +12,29 @@
       "resizeMode": "contain",
       "backgroundColor": "#101124"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pedrodutra.curriculowebmobile"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#101124"
-      }
+      },
+      "package": "com.pedrodutra.curriculowebmobile"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        { "root": "src/app" }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
